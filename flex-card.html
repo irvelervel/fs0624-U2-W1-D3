@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Card</title>
+    <style>
+      .card {
+        width: 300px;
+        min-height: 500px;
+        box-shadow: 3px 3px 10px 5px #000000;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .text-content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1em;
+      }
+
+      .text-content button {
+        width: 75%;
+        margin: 0 auto; /* allinea orizzontalmente */
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article class="card">
+        <img src="https://placedog.net/300/300" alt="dog picture" />
+        <div class="text-content">
+          <h3>Lorem ipsum</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum
+            officia velit nisi iusto cumque voluptatem ab sed voluptate.
+          </p>
+          <button>Go to page</button>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>

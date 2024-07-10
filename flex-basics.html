@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Basics!</title>
+
+    <style>
+      .container {
+        width: 500px;
+        height: 300px;
+        background-color: lightcoral;
+        display: flex; /* rendo questo elemento un contenitore flessibile */
+        /* flex-direction: row <- lo scrivo commentato perchè è il valore di default*/
+        /* justify-content: flex-start <- lo scrivo commentato perchè è il valore di default*/
+        /* sovrascrivo il valore di default di align-items */
+        align-items: center; /* allineo gli elementi sull'asse cross (in questo
+        caso la Y) in cima */
+      }
+
+      .flex-item {
+        padding: 10px;
+        background-color: aqua;
+      }
+
+      .flex-item:nth-of-type(2) {
+        flex-grow: 1;
+        order: 1;
+      }
+
+      .flex-item:nth-of-type(3) {
+        flex-grow: 1;
+      }
+
+      .flex-item:nth-of-type(7) {
+        background-color: green;
+        color: white;
+      }
+
+      .flex-item:nth-of-type(8) {
+        order: -1;
+      }
+
+      .flex-item:nth-of-type(10) {
+        align-self: flex-start;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+        <div class="flex-item">6</div>
+        <div class="flex-item">7</div>
+        <div class="flex-item">8</div>
+        <div class="flex-item">9</div>
+        <div class="flex-item">10</div>
+      </div>
+    </main>
+  </body>
+</html>
